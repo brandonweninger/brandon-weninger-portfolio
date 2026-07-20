@@ -11,7 +11,7 @@
 
   <header>
     <div class="header-inner">
-      <a href="index.html" class="site-logo">Brandon M. Weninger</a>
+      <a href="index.html" class="site-logo">Brandon M. <span>Weninger</span></a>
       <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
@@ -23,7 +23,6 @@
           <li><a href="case-studies.html">Case Studies</a></li>
           <li><a href="tools.html">Tools</a></li>
           <li><a href="templates.html" class="active">Templates</a></li>
-          <li><a href="training-samples.html">Training Samples</a></li>
         </ul>
       </nav>
     </div>
@@ -32,6 +31,38 @@
   <main>
     <h1 class="page-title">Templates &amp; Examples</h1>
     <p class="page-subtitle">Reusable frameworks, workflow examples, and AI agent designs from real-world learning operations work.</p>
+
+    <!-- DOWNLOADABLE ASSETS -->
+    <div class="featured-card">
+      <h2>&#11015; Downloadable Assets</h2>
+      <p>Real work samples you can download and reference. Each document reflects tools, workflows, and instructional design artifacts built from actual learning operations experience.</p>
+      <div class="card-grid" style="margin-top:1.25rem;">
+        <div class="card">
+          <span class="card-tag">Workflow</span>
+          <h3>Training SKU Recommendation Workflow</h3>
+          <p>Full AI agent workflow — SKU table, decision logic, CPQ-ready output, and a sample agent dialogue.</p>
+          <a href="assets/files/training-sku-recommendation-workflow.docx" class="card-link" download>&#11015; Download DOCX</a>
+        </div>
+        <div class="card">
+          <span class="card-tag">Workflow</span>
+          <h3>Sales Conversation Workflow</h3>
+          <p>Real-time AI discovery framework — signal detection, question prompts, SKU agent integration, and CPQ handoff.</p>
+          <a href="assets/files/sales-conversation-workflow.docx" class="card-link" download>&#11015; Download DOCX</a>
+        </div>
+        <div class="card">
+          <span class="card-tag">Facilitator Guide</span>
+          <h3>Sample Facilitator Guide</h3>
+          <p>Complete 45-minute vILT facilitator guide — timing, talking points, hands-on activity, and debrief questions.</p>
+          <a href="assets/files/sample-facilitator-guide.docx" class="card-link" download>&#11015; Download DOCX</a>
+        </div>
+        <div class="card">
+          <span class="card-tag">Storyboard</span>
+          <h3>Microlearning Module Storyboard</h3>
+          <p>Full eLearning storyboard for a 10-minute Articulate Storyline module — narration, interactions, branching, and developer notes.</p>
+          <a href="assets/files/microlearning-module-storyboard.docx" class="card-link" download>&#11015; Download DOCX</a>
+        </div>
+      </div>
+    </div>
 
     <!-- SOP Template -->
     <section>
@@ -75,8 +106,8 @@
 
         <h3>Decision Points</h3>
         <ul class="impact-list">
-          <li>If X → do Y</li>
-          <li>If A → escalate to B</li>
+          <li>If X &rarr; do Y</li>
+          <li>If A &rarr; escalate to B</li>
         </ul>
 
         <h3>Tools &amp; Systems Used</h3>
@@ -101,7 +132,7 @@
           Customer authenticates through the existing support portal. Portal permissions determine whether the user can access the Learning tab.
         </li>
         <li>
-          <strong>Salesforce → LMS Auto-Provisioning</strong><br />
+          <strong>Salesforce &rarr; LMS Auto-Provisioning</strong><br />
           When a customer with portal access clicks the Learning tab, the system checks Salesforce. If the user exists, an LMS account is automatically created or updated. Role, account, and entitlement data sync from Salesforce to the LMS.
         </li>
         <li>
@@ -110,11 +141,11 @@
         </li>
         <li>
           <strong>Purchasing Additional eLearning Packages</strong><br />
-          When a customer selects a package to purchase, the system triggers a Salesforce workflow. An Opportunity is automatically created for the assigned Customer Success Manager. The CSM reviews the request, confirms entitlements, and completes the transaction.
+          When a customer selects a package to purchase, the system triggers a Salesforce workflow. An Opportunity is automatically created for the assigned Customer Success Manager.
         </li>
         <li>
           <strong>Credit-Based Redemption</strong><br />
-          If the customer has training credits available, the CSM redeems them directly within Salesforce. The LMS automatically unlocks the purchased course or package and sends a confirmation email with immediate access.
+          If the customer has training credits available, the CSM redeems them directly within Salesforce. The LMS automatically unlocks the purchased course or package and sends a confirmation email.
         </li>
         <li>
           <strong>Reporting &amp; Visibility</strong><br />
@@ -127,55 +158,29 @@
     <section>
       <h2>Case Study: AI Agent for Automated Training Recommendations</h2>
       <h3>Overview</h3>
-      <p>I designed and built a Copilot agent that automated the process of recommending training packages for Sales and Customer Success teams. The agent analyzed product details, training SKUs, and delivery formats to generate accurate, scalable training recommendations.</p>
+      <p>I designed and built a Copilot agent that automated the process of recommending training packages for Sales and Customer Success teams.</p>
 
       <h3>The Challenge</h3>
-      <p>Before the agent existed:</p>
       <ul class="impact-list">
         <li>Sellers manually searched through training SKUs</li>
-        <li>Pricing was inconsistent</li>
-        <li>Recommendations varied by rep</li>
+        <li>Pricing was inconsistent across reps</li>
         <li>Training capacity limits were often overlooked</li>
-        <li>CSMs spent time validating training details</li>
+        <li>CSMs spent significant time validating training details</li>
       </ul>
-      <p>This created friction, delays, and inconsistent customer experiences.</p>
 
       <h3>My Approach</h3>
-      <p>I built a Copilot agent that:</p>
       <ul class="impact-list">
-        <li>Read from an Excel file containing all training SKUs</li>
-        <li>Understood duration, pricing, delivery formats, and class size limits</li>
-        <li>Cross-referenced training materials to ensure topic accuracy</li>
+        <li>Built a Copilot agent reading from an Excel SKU database</li>
+        <li>Agent understood duration, pricing, delivery formats, and class size limits</li>
         <li>Asked clarifying questions to refine recommendations</li>
-        <li>Generated a complete training package proposal</li>
+        <li>Generated CPQ-ready training package proposals</li>
       </ul>
-
-      <h3>Key Features</h3>
-      <div class="card-grid">
-        <div class="card">
-          <span class="card-tag">Automation</span>
-          <h3>Automated Selection</h3>
-          <p>Topic selection, duration calculation, and pricing — all handled automatically without manual lookups.</p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Validation</span>
-          <h3>Class Size Validation</h3>
-          <p>Checks capacity limits and recommends additional sessions when needed. Intelligent follow-up questions to refine output.</p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Output</span>
-          <h3>Salesforce CPQ Ready</h3>
-          <p>Output formatted for direct entry into Salesforce CPQ — no reformatting required, faster quote creation.</p>
-        </div>
-      </div>
 
       <h3>Impact</h3>
       <ul class="impact-list">
-        <li>Sellers received instant, accurate training recommendations</li>
-        <li>Reduced manual SKU lookup time</li>
+        <li>Instant, accurate training recommendations for sellers</li>
         <li>Improved pricing consistency across the sales team</li>
-        <li>Increased training revenue opportunities</li>
-        <li>CSMs spent less time validating training details</li>
+        <li>Reduced manual SKU lookup time</li>
         <li>Faster quote creation in Salesforce CPQ</li>
       </ul>
     </section>
@@ -184,61 +189,35 @@
     <section>
       <h2>Case Study: Real-Time AI Agent for Sales Conversations</h2>
       <h3>Overview</h3>
-      <p>I began developing a live Copilot agent capable of supporting sellers in real time during Teams calls or chat-based interactions. The agent listened to conversations, identified training needs, and guided sellers toward the right questions and recommendations.</p>
+      <p>I began developing a live Copilot agent capable of supporting sellers in real time during Teams calls — detecting training signals, prompting discovery questions, and surfacing package recommendations mid-conversation.</p>
 
       <h3>The Challenge</h3>
-      <p>Sellers often struggled to:</p>
       <ul class="impact-list">
-        <li>Identify when training should be recommended</li>
-        <li>Ask the right discovery questions</li>
-        <li>Understand customer readiness</li>
-        <li>Connect product complexity to training needs</li>
-        <li>Transition from conversation to quote creation</li>
+        <li>Sellers struggled to identify when training should be recommended</li>
+        <li>Discovery question quality varied by rep</li>
+        <li>Transition from conversation to quote was slow and inconsistent</li>
       </ul>
 
       <h3>My Approach</h3>
-      <p>I designed a real-time AI agent that:</p>
       <ul class="impact-list">
-        <li>Listened to seller–customer conversations</li>
-        <li>Interpreted customer responses</li>
-        <li>Prompted sellers with follow-up questions</li>
-        <li>Identified training opportunities</li>
-        <li>Cross-referenced the Training SKU Recommendation Agent</li>
-        <li>Suggested training packages based on conversation context</li>
+        <li>Agent listens to seller-customer conversations in real time</li>
+        <li>Identifies training need signals and prompts follow-up questions</li>
+        <li>Cross-references the SKU Recommendation Agent for package suggestions</li>
+        <li>Outputs recommendations formatted for Salesforce CPQ</li>
       </ul>
 
-      <h3>Key Features</h3>
-      <div class="card-grid">
-        <div class="card">
-          <span class="card-tag">Real-Time</span>
-          <h3>Conversation Analysis</h3>
-          <p>Live listening and interpretation during Teams calls and chat, with intelligent question prompting for sellers.</p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Detection</span>
-          <h3>Training Need Detection</h3>
-          <p>Identifies training opportunities in real time and integrates with Agent #1 for SKU recommendations.</p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Output</span>
-          <h3>CPQ-Ready Output</h3>
-          <p>Recommendations formatted and ready for Salesforce CPQ — moving faster from conversation to quote.</p>
-        </div>
-      </div>
-
-      <h3>Impact (Projected)</h3>
+      <h3>Projected Impact</h3>
       <ul class="impact-list">
         <li>Increased training attach rates</li>
-        <li>More consistent discovery conversations</li>
-        <li>Reduced missed opportunities</li>
-        <li>Faster movement from conversation → quote</li>
+        <li>More consistent discovery conversations across the team</li>
+        <li>Faster movement from conversation to quote</li>
         <li>Stronger alignment between Sales, CS, and Training</li>
       </ul>
     </section>
 
     <section>
       <div class="quick-links">
-        <a href="case-studies.html" class="btn btn-primary">Read Full Case Studies →</a>
+        <a href="case-studies.html" class="btn btn-primary">Read Full Case Studies &rarr;</a>
         <a href="tools.html" class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);">View My Tools</a>
       </div>
     </section>
@@ -252,7 +231,6 @@
       <a href="case-studies.html">Case Studies</a>
       <a href="tools.html">Tools</a>
       <a href="templates.html">Templates</a>
-      <a href="training-samples.html">Training Samples</a>
     </div>
     <p>&copy; 2026 Brandon M. Weninger &bull; Chicago, IL &bull; <a href="mailto:brandon.weninger@gmail.com">brandon.weninger@gmail.com</a></p>
   </footer>
