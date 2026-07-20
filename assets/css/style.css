@@ -483,3 +483,82 @@ footer a:hover { color: var(--white); }
 
   .header-inner { position: relative; }
 }
+/* =============================================
+   Training Samples Page Styles
+   ============================================= */
+
+/* Section spacing */
+main section {
+  background: var(--accent);
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Section titles */
+main section h2 {
+  color: var(--navy);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Subheadings */
+main section h3 {
+  color: var(--teal);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* Lists */
+.impact-list li,
+.flow-steps li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Flow steps (numbered list) */
+.flow-steps {
+  padding-left: 1.2rem;
+}
+
+.flow-steps li {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* Blockquote styling */
+blockquote {
+  background: #fff;
+  border-left: 4px solid var(--teal);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Quick links buttons */
+.quick-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.quick-links .btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.quick-links .btn-primary {
+  background: var(--teal);
+  color: #fff;
+}
+
+.quick-links .btn-outline {
+  border: 2px solid var(--teal);
+  color: var(--teal);
+}
