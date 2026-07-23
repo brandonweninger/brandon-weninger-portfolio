@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Templates & Examples | Brandon M. Weninger</title>
   <meta name="description" content="Templates and examples from Brandon M. Weninger — SOP frameworks, LMS workflows, facilitator guides, and AI-enabled learning operations resources. All templates available upon request." />
   <meta name="author" content="Brandon M. Weninger" />
@@ -10,15 +10,28 @@
   <meta name="keywords" content="training templates, SOP templates, LMS workflows, facilitator guides, learning operations templates, Brandon Weninger templates" />
   <link rel="canonical" href="https://brandonweninger.github.io/brandon-weninger-portfolio/templates.html" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Brandon M. Weninger" />
   <meta property="og:title" content="Templates & Examples | Brandon M. Weninger" />
   <meta property="og:description" content="Training templates, SOPs, LMS workflows, and facilitator guides. Available upon request." />
   <meta property="og:url" content="https://brandonweninger.github.io/brandon-weninger-portfolio/templates.html" />
+  <meta property="og:image" content="assets/images/og-templates.png" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Templates & Examples | Brandon M. Weninger" />
   <meta name="twitter:description" content="Training templates and learning operations resources. Available upon request." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://brandonweninger.github.io/brandon-weninger-portfolio/templates.html",
+    "name": "Templates & Examples — Brandon M. Weninger",
+    "description": "Training templates, SOPs, LMS workflows, and facilitator guides available upon request."
+  }
+  </script>
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -36,9 +49,11 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="site-logo">Brandon M. Weninger</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('nav ul').classList.toggle('open')">
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -56,9 +71,7 @@
 
   <main>
     <h1 class="page-title">Templates &amp; Examples</h1>
-    <p class="page-subtitle">
-      Templates and examples are available upon request. Select items are previewed here for employers and collaborators.
-    </p>
+    <p class="page-subtitle">Templates and examples are available upon request. Select items are previewed here for employers and collaborators.</p>
 
     <section>
       <h2>AI‑Enabled Learning Operations Templates</h2>
@@ -109,7 +122,7 @@
         <div class="card">
           <span class="card-tag">Checklist</span>
           <h3>Training Quality Review Checklist</h3>
-          <p>Cross-region quality review checklist used to standardize training delivery across North America & Costa Rica.</p>
+          <p>Cross-region quality review checklist used to standardize training delivery across North America &amp; Costa Rica.</p>
           <a href="mailto:brandon.weninger@gmail.com?subject=Request%20Access%20to%20Quality%20Checklist" class="card-link">Request Access &rarr;</a>
         </div>
 
@@ -117,13 +130,35 @@
     </section>
 
     <section>
+      <h2>Sample Artifacts</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag">Template</span>
+          <h3>Facilitator Slide Deck (Outline)</h3>
+          <p>Slide deck outline with timing, speaker notes, and learner activities — ready for rapid authoring.</p>
+          <a href="mailto:brandon.weninger@gmail.com?subject=Request%20Access%20to%20Facilitator%20Deck" class="card-link">Request Access &rarr;</a>
+        </div>
+
+        <div class="card">
+          <span class="card-tag">Template</span>
+          <h3>Onboarding Checklist</h3>
+          <p>New-trainer onboarding checklist with milestones, shadow sessions, and QA signoffs.</p>
+          <a href="mailto:brandon.weninger@gmail.com?subject=Request%20Access%20to%20Onboarding%20Checklist" class="card-link">Request Access &rarr;</a>
+        </div>
+
+        <div class="card">
+          <span class="card-tag">Template</span>
+          <h3>Knowledge Base Article Template</h3>
+          <p>Consistent KB article structure for product updates, troubleshooting, and quick reference guides.</p>
+          <a href="mailto:brandon.weninger@gmail.com?subject=Request%20Access%20to%20KB%20Template" class="card-link">Request Access &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <div class="quick-links">
-        <a href="mailto:brandon.weninger@gmail.com?subject=Request%20Access%20to%20All%20Templates" class="btn btn-primary">
-          Request All Templates &rarr;
-        </a>
-        <a href="tools.html" class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);">
-          View Tools
-        </a>
+        <a href="mailto:brandon.weninger@gmail.com?subject=Request%20Access%20to%20All%20Templates" class="btn btn-primary">Request All Templates &rarr;</a>
+        <a href="tools.html" class="btn btn-outline btn-outline--navy">View Tools</a>
       </div>
     </section>
   </main>
@@ -139,9 +174,21 @@
       <a href="training-samples.html">Training Samples</a>
       <a href="https://linkedin.com/in/brandonweninger" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <p>&copy; 2026 Brandon M. Weninger &bull; Chicago, IL &bull; 
-      <a href="mailto:brandon.weninger@gmail.com">brandon.weninger@gmail.com</a>
-    </p>
+    <p>&copy; 2026 Brandon M. Weninger &bull; Chicago, IL &bull; <a href="mailto:brandon.weninger@gmail.com">brandon.weninger@gmail.com</a></p>
   </footer>
+
+  <script>
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navList = document.querySelector('nav ul');
+
+      if (!navToggle || !navList) return;
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = navList.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    })();
+  </script>
 </body>
 </html>
